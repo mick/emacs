@@ -1,24 +1,32 @@
 (add-to-list 'load-path "~/.emacs.d/vendor")
 
 ; custom place to save customizations
-(setq custom-file "~/.emacs.d/defunkt/custom.el")
+(setq custom-file "~/.emacs.d/dthompson/custom.el")
 (load custom-file)
 
 (when (file-exists-p ".passwords") (load ".passwords"))
 
-(load "defunkt/lisp")
-(load "defunkt/global")
-(load "defunkt/defuns")
-(load "defunkt/bindings")
-(load "defunkt/modes")
-(load "defunkt/theme")
-(load "defunkt/temp_files")
-(load "defunkt/github")
-(load "defunkt/git")
-(load "defunkt/todo")
+(load "dthompson/lisp")
+(load "dthompson/global")
+(load "dthompson/defuns")
+(load "dthompson/bindings")
+(load "dthompson/modes")
+(load "dthompson/theme")
+(load "dthompson/temp_files")
+(load "dthompson/github")
+(load "dthompson/git")
+(load "dthompson/todo")
+(load "dthompson/python")
+(load "dthompson/javascript")
 
-(when (file-exists-p "defunkt/private")
-  (load "defunkt/private"))
+(autoload 'css-mode "css-mode")
+(setq auto-mode-alist
+      (cons '("\\.css\\'" . css-mode) auto-mode-alist))
+
+
+
+(when (file-exists-p "dthompson/private")
+  (load "dthompson/private"))
 
 (vendor 'ack)
 (vendor 'cheat)

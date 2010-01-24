@@ -1,13 +1,14 @@
 ;; others
-(load "defunkt/dired")
-(load "defunkt/ruby")
-(load "defunkt/shell")
-(load "defunkt/javascript")
-(load "defunkt/erlang")
-(load "defunkt/python")
-(load "defunkt/sgml")
-(load "defunkt/erc")
-(load "defunkt/artist")
+(load "dthompson/dired")
+(load "dthompson/ruby")
+(load "dthompson/shell")
+(load "dthompson/javascript")
+(load "dthompson/erlang")
+(load "dthompson/python")
+(load "dthompson/sgml")
+(load "dthompson/erc")
+(load "dthompson/artist")
+(load "dthompson/css")
 
 ;; all modes
 (add-hook 'before-save-hook 'delete-trailing-whitespace)

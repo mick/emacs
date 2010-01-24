@@ -22,7 +22,7 @@
   (interactive)
   (find-file
    (concat "~/Projects/" (ido-completing-read "Project: "
-                           (directory-files "~/Projects/" nil "^[^.]")))))
+                           (directory-files "~/Dropbox/Collecta/" nil "^[^.]")))))
 
 (defun defunkt-goto-config ()
   (interactive)

@@ -13,6 +13,7 @@
 (global-set-key "\C-R" 'replace-string)
 (global-set-key (kbd "A-F") 'ack)
 
+
 ; todo
 (global-set-key [M-return] 'defunkt-todo-toggle)
 (global-set-key "\C-xt" 'defunkt-todo-quick-enter)
@@ -20,14 +21,14 @@
 (global-set-key [M-up] 'defunkt-todo-move-item-up)
 
 ; vim emulation
-(global-set-key [C-tab] 'other-window)
+;;(global-set-key [C-tab] 'other-window)
 ;; (global-set-key [M-up] 'defunkt-inc-num-at-point)
 ;; (global-set-key [M-down] 'defunkt-dec-num-at-point)
-(global-set-key (kbd "C-*") 'isearch-forward-at-point)
-(global-set-key [remap kill-word] 'defunkt-kill-word)
+;;(global-set-key (kbd "C-*") 'isearch-forward-at-point)
+;;(global-set-key [remap kill-word] 'defunkt-kill-word)
 (global-set-key (kbd "C-S-k") 'defunkt-backward-kill-line)
-(global-set-key [remap backward-kill-word] 'defunkt-backward-kill-word)
-(global-set-key [remap aquamacs-backward-kill-word] 'defunkt-backward-kill-word)
+;;(global-set-key [remap backward-kill-word] 'defunkt-backward-kill-word)
+;;(global-set-key [remap aquamacs-backward-kill-word] 'defunkt-backward-kill-word)
 
 ; no printing!
 (when (boundp 'osx-key-mode-map)
@@ -35,5 +36,5 @@
    '(lambda () (interactive) (message "noop"))))
 
 ; no mailing!
-(global-unset-key (kbd "C-x m"))
-(global-unset-key "\C-z")
+;;(global-unset-key (kbd "C-x m"))
+;;(global-unset-key "\C-z")
