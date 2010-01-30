@@ -18,6 +18,8 @@
 (load "dthompson/todo")
 (load "dthompson/python")
 (load "dthompson/javascript")
+(load "dthompson/erlang")
+
 
 (autoload 'css-mode "css-mode")
 (setq auto-mode-alist
