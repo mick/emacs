@@ -3,13 +3,13 @@
 (load "dthompson/ruby")
 (load "dthompson/shell")
 (load "dthompson/javascript")
-(load "dthompson/erlang")
+;;(load "dthompson/erlang")
 (load "dthompson/python")
 (load "dthompson/sgml")
 (load "dthompson/erc")
 (load "dthompson/artist")
 (load "dthompson/css")
-
+(load "dthompson/php-mode")
 ;; all modes
 ;(add-hook 'before-save-hook 'delete-trailing-whitespace)
 
