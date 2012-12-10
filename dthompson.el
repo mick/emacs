@@ -4,6 +4,11 @@
 (setq custom-file "~/.emacs.d/dthompson/custom.el")
 (load custom-file)
 
+(require 'uniquify)
+(setq uniquify-buffer-name-style 'forward)
+
+(server-start)
+
 (when (file-exists-p ".passwords") (load ".passwords"))
 
 (load "dthompson/lisp")
@@ -20,7 +25,10 @@
 (load "dthompson/javascript")
 ;;(load "dthompson/erlang")
 
+(add-to-list 'load-path "~/.emacs.d/vendor/coffee-mode")
+(require 'coffee-mode)
 
+(color-theme-midnight)
 ;; setup erlang mode
 ;; add the location of the elisp files to the load-path
 (setq load-path (cons  "/usr/local/Cellar/erlang/R13B03/lib/erlang/lib/tools-2.6.5/emacs"
@@ -33,12 +41,24 @@
 ;; everything else 
 (require 'erlang-start)
 
+(add-hook 'erlang-mode-hook
+               (lambda ()
+                (font-lock-add-keywords nil
+                 '(("\\<\\(FIXME\\|TODO\\|BUG\\):" 1 font-lock-warning-face t)))))
+
 
 (autoload 'css-mode "css-mode")
 (setq auto-mode-alist
       (cons '("\\.css\\'" . css-mode) auto-mode-alist))
+;; fix css mode
+(require 'css-mode)
+(setq cssm-indent-level 2)
+(setq cssm-newline-before-closing-bracket t)
+(setq cssm-indent-function #'cssm-c-style-indenter)
+(setq cssm-mirror-mode t)
+(setq js-indent-level 2)
 
-
+(column-number-mode)
 
 (when (file-exists-p "dthompson/private")
   (load "dthompson/private"))
